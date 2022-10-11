@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\usepackage{graphicx}
+
+\title{Hello World!}
+
+\author{Maria Mempin}
+
+\date{January 1, 1831}
+
+\begin{document}
+\maketitle    
+\section{Getting Started}
+\textbf{Hello World!} Today I am learning \LaTeX. \LaTeX{} is a great program for writing math.  I can write in line math such as $a^2 + b^2 = c^2$.   I can also give equations their own space: 
+\begin{equation}
+    \gamma^2 +\theta^2 = \omega^2
+\end{equation}
+``Maxwell's equations" are named for James Clark Maxwell and are as follow:
+\begin{align}
+    \vec{\nabla} \cdot \vec{E} \quad &=\quad\frac{\rho}{\epsilon_0} &&\text{Gauss's Law} \label{eq:GL}\\      
+    \vec{\nabla} \cdot \vec{B} \quad &=\quad 0 &&\text{Gauss's Law for Magnetism} \label{eq:GLM}\\
+    \vec{\nabla} \times \vec{E} \quad &=\hspace{10pt}-\frac{\partial{\vec{B}}}{\partial{t}} &&\text{Faraday's Law of Induction} \label{eq:FL}\\ 
+    \vec{\nabla} \times \vec{B} \quad &=\quad \mu_0\left( \epsilon_0\frac{\partial{\vec{E}}}{\partial{t}}+\vec{J}\right) &&\text{Ampere's Circuital Law} \label{eq:ACL}
+    \end{align}
+    Equations \ref{eq:GL}, \ref{eq:GLM}, \ref{eq:FL}, and \ref{eq:ACL} are some of the most important in Physics.
+    \section{What about Matrix Equations?}
+    \begin{equation*}
+        \begin{pmatrix}
+        a_{11}&a_{12}&\dots&a_{1n}\\
+        a_{21}&a_{22}&\dots&a_{2n}\\
+        \vdots&\vdots&\ddots&\vdots\\
+        a_{n1}&a_{n2}&\dots&a_{nn}
+        \end{pmatrix}
+        \begin{bmatrix}
+        v_{1}\\
+        v_{2}\\
+        \vdots\\
+        v_{n}
+        \end{bmatrix}
+        =
+        \begin{matrix}
+        w_{1}\\
+        w_{2}\\
+        \vdots\\
+        w_{n}
+        \end{matrix}
+        \end{equation*}
+    \section{Tables and Figures}
+Creating a Table is not unlike creating a matrix:
+\begin{table}[h!]
+    \centering
+    \caption{This is a table that shows how to create different lines as well as different justifications}
+    \begin{tabular}{|l||c|c|r|}
+    \hline
+    $x$&1&2&3\\
+    \hline
+    $f(x)$&4&8&12\\
+    f(x)&4&8&12\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{bg-8}
+\caption{Bern Dibner Library}
+\end{figure}
+\section{References}
+You will probably want references in your document so that you can cite articles like \cite{frenkel_fine_2013, frenkel_optical_2013, frenkel_temperature_2012, frenkel_whispering-gallery_2013,frenkel_-chip_2016}
+
+\bibliography{bibl}
+\end{document}
